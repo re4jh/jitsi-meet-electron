@@ -1,9 +1,9 @@
 {
   "name": "jitsi-meet-electron",
-  "version": "2.0.28",
-  "description": "Electron application for Freifunk Meet",
+  "version": "2.4.1",
+  "description": "Electron application for Jitsi Meet",
   "main": "./build/main.js",
-  "productName": "FreifunkMeet",
+  "productName": "Jitsi Meet",
   "scripts": {
     "start": "webpack --config ./webpack.main.js --mode development && concurrently \"npm:watch\" \"electron ./build/main.js\"",
     "clean": "rm -rf node_modules build dist",
@@ -18,8 +18,8 @@
     "node": ">=12.0.0"
   },
   "build": {
-    "appId": "meet.ffmuc.net",
-    "productName": "FreifunkMeet",
+    "appId": "org.jitsi.jitsi-meet",
+    "productName": "Jitsi Meet",
     "generateUpdatesFilesForAllChannels": true,
     "files": [
       "**/*",
@@ -28,35 +28,31 @@
       "!main.js"
     ],
     "mac": {
-      "artifactName": "ffmuc-meet.${ext}",
+      "artifactName": "jitsi-meet.${ext}",
       "category": "public.app-category.video",
       "darkModeSupport": true,
       "hardenedRuntime": true,
       "entitlements": "entitlements.mac.plist",
       "entitlementsInherit": "entitlements.mac.plist",
       "extendInfo": {
-        "NSCameraUsageDescription": "FreifunkMeet requires access to your camera in order to make video-calls.",
-        "NSMicrophoneUsageDescription": "FreifunkMeet requires access to your microphone in order to make calls (audio/video)."
+        "NSCameraUsageDescription": "Jitsi Meet requires access to your camera in order to make video-calls.",
+        "NSMicrophoneUsageDescription": "Jitsi Meet requires access to your microphone in order to make calls (audio/video)."
       }
     },
     "linux": {
-      "artifactName": "ffmuc-meet-${arch}.${ext}",
+      "artifactName": "jitsi-meet-${arch}.${ext}",
       "category": "VideoConference;AudioVideo;Audio;Video;Network",
-      "description": "FreifunkMeetApp",
-      "executableName": "ffmuc-meet",
+      "description": "Jitsi Meet Desktop App",
+      "executableName": "jitsi-meet",
       "target": [
         {
           "arch": "x64",
           "target": "AppImage"
-        },
-        {
-          "arch": "x64",
-          "target": "deb"
         }
       ]
     },
     "win": {
-      "artifactName": "ffmuc-meet.${ext}",
+      "artifactName": "jitsi-meet.${ext}",
       "target": [
         {
           "arch": [
@@ -85,16 +81,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/FreifunkMUC/jitsi-meet-electron"
+    "url": "git://github.com/jitsi/jitsi-meet-electron"
   },
   "keywords": [
     "jingle",
     "webrtc",
     "xmpp",
     "electron",
-    "freifunk-meet"
+    "jitsi-meet"
   ],
-  "author": "Freifunk Muenchen <hilfe@ffmuc.bayern>",
+  "author": "Jitsi Team <support@jitsi.org>",
   "readmeFilename": "README.md",
   "license": "Apache-2.0",
   "dependencies": {
@@ -150,7 +146,7 @@
     "concurrently": "5.1.0",
     "css-loader": "3.5.0",
     "devtron": "1.4.0",
-    "electron": "10.1.2",
+    "electron": "10.1.5",
     "electron-builder": "22.7.0",
     "electron-react-devtools": "0.5.3",
     "eslint": "6.5.1",
@@ -162,7 +158,6 @@
     "file-loader": "6.0.0",
     "flow-bin": "0.109.0",
     "html-webpack-plugin": "4.0.4",
-    "js-md5": "0.7.3",
     "patch-package": "6.2.2",
     "style-loader": "1.1.3",
     "webpack": "4.42.1",
