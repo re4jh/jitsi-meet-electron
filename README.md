@@ -1,6 +1,6 @@
-# Jitsi Meet Electron
+# Freifunk Meet Electron
 
-Desktop application for [Jitsi Meet] built with [Electron].
+Desktop application for [Jitsi] built with [Electron].
 
 ![](screenshot.png)
 
@@ -19,20 +19,18 @@ Download our latest release and you're off to the races!
 
 | Windows | macOS | GNU/Linux (64-bit only) |
 | -- | -- | -- |
-| [Download](https://github.com/jitsi/jitsi-meet-electron/releases/latest/download/jitsi-meet.exe) | [Download](https://github.com/jitsi/jitsi-meet-electron/releases/latest/download/jitsi-meet.dmg) | [Download](https://github.com/jitsi/jitsi-meet-electron/releases/latest/download/jitsi-meet-x86_64.AppImage) |
+| [Download](https://github.com/freifunkMUC/jitsi-meet-electron/releases/latest/download/ffmuc-meet.exe) | [Download](https://github.com/freifunkMUC/jitsi-meet-electron/releases/latest/download/ffmuc-meet.dmg) | [Download](https://github.com/freifunkMUC/jitsi-meet-electron/releases/latest/download/ffmuc-meet-x86_64.AppImage) |
 
 ### Third-Party builds
 
-[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg"
-     alt="Download On Flathub"
-     height="60">](https://flathub.org/apps/details/org.jitsi.jitsi-meet)
+[Flathub](https://flathub.org/apps/details/org.jitsi.jitsi-meet)
 
 ### Homebrew
 
 For *macOS* user, you can install the application using the following command:
 
 ```
-brew cask install jitsi-meet
+brew cask install freifunkMUC/freifunkmeet/freifunk-meet
 ```
 
 ### Using it with your own Jitsi Meet installation
@@ -53,14 +51,6 @@ If you want to hack on this project, here is how you do it.
 #### Installing dependencies
 
 Install Node.js 12 first (or if you use [nvm](https://github.com/nvm-sh/nvm), switch to Node.js 12 by running `nvm use`).
-
-<details><summary>Extra dependencies for Windows</summary>
-
-```bash
-npm install --global --production windows-build-tools
-npm config set msvs_version 2017
-```
-</details>
 
 <details><summary>Extra dependencies for GNU/Linux</summary>
 
@@ -144,9 +134,9 @@ Builtin auto-updates are not yet handled in macOS due to unsigned build.
 
 ### GNU/Linux
 
-There is a known issue which prevents the app from starting on some Linux distributions: [#231](https://github.com/jitsi/jitsi-meet-electron/issues/231)
+There is a known issue which prevents the app from starting on some Linux distributions: #231
 
-If after downloading it, you can't execute the file directly, try running `chmod u+x ./jitsi-meet-x86_64.AppImage`
+If after downloading it, you can't execute the file directly, try running `chmod u+x ./jitsi-meet-x86_64.AppImage.AppImage`
 
 The workaround for now is to launch the app like so: `./jitsi-meet-x86_64.AppImage --no-sandbox`
 
@@ -177,10 +167,10 @@ Apache 2. See the [LICENSE] file.
 Jitsi is built by a large community of developers, if you want to participate,
 please join [community forum].
 
-[Jitsi Meet]: https://github.com/jitsi/jitsi-meet
+[FreifunkMeet]: https://github.com/FreifunkMUC/jitsi-meet
 [Electron]: https://electronjs.org/
-[latest release]: https://github.com/jitsi/jitsi-meet-electron/releases/latest
+[latest release]: https://github.com/FreifunkMUC/jitsi-meet-electron/releases/latest
 [jitsi-meet-electron-utils]: https://github.com/jitsi/jitsi-meet-electron-utils
-[jitsi-meet-electron-utils README]: https://github.com/jitsi/jitsi-meet-electron-utils/blob/master/README.md
+[jitsi-meet-electron-utils README]: https://github.com/FreifunkMUC/jitsi-meet-electron-utils/blob/master/README.md
 [community forum]: https://community.jitsi.org/
 [LICENSE]: LICENSE
